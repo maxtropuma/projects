@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:whitesmoke;    
+}
+
+.noct{
+    background-color: #091921;
+}
+
+.clock{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../Reloj/reloj.png);
+    background-size: cover;
+    border: 4px solid #091921;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255,255,255,0.06),
+                inset 0 -15px 15px rgba(255,255,255,0.04),
+                 0 15px 15px rgba(0, 0,0,0.3),
+                inset 0 15px 15px rgba(0, 0,0,0.3);
+    
+}
+
+.clock:before{
+    content: '';
+    background: black;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hr, .clock .min, .clock .sec{
+    position: absolute;
+}
+
+.clock .hour, .hr{
+    width: 80px;
+    height: 80px;
+}
+
+.clock .min, .mn{
+    width: 95px;
+    height: 95px;
+}
+
+.clock .sec, .sc{
+    width: 110px;
+    height: 110px;
+}
+
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 45px;
+    background:green;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 75px;
+    background: darkslategrey;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+/*------------------------ reloj digital -----------------------------------*/
+
+section {
+    display: flex;
+    position: absolute;
+    margin-top: 250px;
+
+}
+
+.sec2{
+    display: flex;
+}
+
+.sec2 h2{
+    color: darkslategray;
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 1em;
+    position: relative;
+}
+
+span{
+    color: deeppink;
+}
+
+.dot{
+    position: relative;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate{
+    0%,50%{
+        opacity: 0;
+    }51%,100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
