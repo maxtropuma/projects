@@ -36,12 +36,10 @@ function hora(){
         //h = h-12
         ampm.innerHTML = 'PM'
         am ='pm'
-    } else {
-       am ='am'
     }
 
     //Cambiando el color de fondo dependiendo del horario
-    if (h>=19 & am == 'pm'  ) {
+    if ((h>=19 || h<6) & am == 'pm'  ) {
         noct.classList.add('noct')
     }else{
         noct.classList.remove('noct')
