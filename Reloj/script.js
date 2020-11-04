@@ -53,7 +53,7 @@ function hora(){
     m = (m < 10) ? '0' + m : m
     s = (s < 10) ? '0' + s : s
 
-    ampm.innerHTML = 'PM'
+    ampm.innerHTML = 'AM'
     hour.innerHTML = h
     minutes.innerHTML = m
     seconds.innerHTML = s
